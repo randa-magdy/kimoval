@@ -46,5 +46,7 @@ module.exports = {
           'changeset',
         ],
       ],
+      // add this because ignore: config?.ignoreCommits that generated in ci in github actions checks not work with node version 20
+      'ignore-commits': [2, 'always', config && config.ignoreCommits]
     },
   };
