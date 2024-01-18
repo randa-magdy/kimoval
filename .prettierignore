@@ -1,0 +1,10 @@
+node_modules
+.next
+public
+.husky
+next-env.d.ts
+package-lock.lock
+next.config.js
+commitlint.config.js
+jest.config.ts
+jest.setup.ts
