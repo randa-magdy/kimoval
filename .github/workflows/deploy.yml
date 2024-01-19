@@ -15,9 +15,12 @@
 #           persist-credentials: false
 
 #       - name: Use Node.js
-#         uses: actions/setup-node@v2
+#         uses: actions/setup-node@v4
 #         with:
-#           node-version: '20.9.0'
+#           node-version: '20.10.0'
+
+#        - name: Set up npm
+#           run: npm install -g npm@10.2.3
 
 #       - name: Install dependencies
 #         run: npm install

@@ -2,25 +2,33 @@
   "extends": [
     "next",
     "next/core-web-vitals",
-    "eslint:recommended",
-    "airbnb",
-    "airbnb-typescript",
-    "plugin:prettier/recommended"
+    "eslint:recommended"
+    // "airbnb",
+    // "airbnb-typescript",
+    // "plugin:prettier/recommended"
   ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": "latest",
-    "sourceType": "module",
-    "project": "./tsconfig.json"
-  },
+  // "parser": "@typescript-eslint/parser",
+  // "parserOptions": {
+  //   "ecmaFeatures": {
+  //     "jsx": true
+  //   },
+  //   "ecmaVersion": "latest",
+  //   "sourceType": "module",
+  //   "project": "./tsconfig.json"
+  // },
   "globals": {
-    "React": "readonly"
+    "React": "readonly" 
   },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": ["prettier"],
   "rules": {
-    "no-unused-vars": [1, { "args": "after-used", "argsIgnorePattern": "^_" }]
+    // "prettier/prettier": "error",
+    "no-unused-vars": [1, { "args": "after-used", "argsIgnorePattern": "^_" }],
+    // suppress errors for missing 'import React' in files 
+    // "react/react-in-jsx-scope": ["off"], 
+    // gives warning if spread props getting passed to component ex. (...props) 
+    "react/jsx-props-no-spreading": ["warn"], 
+    // suppress errors for Function component is not a function       declaration turning off allows us to use arrow functions 
+    "react/function-component-definition": ["off"] 
+
   }
 }
