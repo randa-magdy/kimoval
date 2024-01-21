@@ -16,9 +16,9 @@
   //   "sourceType": "module",
   //   "project": "./tsconfig.json"
   // },
-  "globals": {
-    "React": "readonly" 
-  },
+  // "globals": {
+  //   "React": "readonly" 
+  // },
   "plugins": ["prettier"],
   "rules": {
     // "prettier/prettier": "error",
@@ -26,7 +26,7 @@
     // suppress errors for missing 'import React' in files 
     // "react/react-in-jsx-scope": ["off"], 
     // gives warning if spread props getting passed to component ex. (...props) 
-    "react/jsx-props-no-spreading": ["warn"], 
+    // "react/jsx-props-no-spreading": ["warn"], 
     // suppress errors for Function component is not a function       declaration turning off allows us to use arrow functions 
     "react/function-component-definition": ["off"] 
 
