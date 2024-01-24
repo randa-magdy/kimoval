@@ -59,8 +59,8 @@ const HeaderPage: FC = () => {
           <IconList />
         </div>
       </Space>
-      <Space className="header-nav relative lg:fixed lg:top-0 ms-0 lg:ms-20">
-        <Navbar className="border-b lg:border-none border-white-light" />
+      <Space className="header-nav relative lg:fixed lg:top-0 ms-0 lg:ms-20 h-12">
+        <Navbar className="border-b lg:border-none border-white-light h-full" />
         <SearchButton className="hidden lg:block" />
       </Space>
     </div>

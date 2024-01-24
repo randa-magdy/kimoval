@@ -38,7 +38,7 @@ const navItems = [
 
 const Navbar: FC<NavbarProps> = ({ className }) => {
   return (
-    <nav id="navbar" className="w-full py-2">
+    <nav id="navbar" className="w-full h-full">
       <Tabs items={navItems} className={className} />
     </nav>
   );

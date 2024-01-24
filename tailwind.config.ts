@@ -17,6 +17,9 @@ const config: Config = {
         'gradient-white-light-100':'linear-gradient(90deg,hsla(0,0%,100%,.1) 0,hsla(0,0%,100%,0))',
         'gradient-white-light-200':'linear-gradient(90deg,hsla(0,0%,100%,.2) 0,hsla(0,0%,100%,0))!important'
       },
+      backgroundColor:{
+        'transparent-white':'hsla(0, 0%, 100%, 0.15)'
+      },
       borderColor: {
         'white-light': 'hsla(0, 0%, 100%, 0.15)',
       },
