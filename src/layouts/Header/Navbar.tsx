@@ -11,24 +11,28 @@ interface NavbarProps {
 }
 const navItems = [
   {
+    id: '/smartphones',
     icon: Mobile,
     title: 'Cell Phones',
-    url: '',
+    url: '/smartphones',
     handleClick: () => console.log('hi'),
   },
   {
+    id: '',
     icon: Tablet,
     title: 'Tablets',
     url: '',
     handleClick: () => console.log('hi'),
   },
   {
+    id: '',
     icon: FireOutline,
     title: 'Deals',
     url: '',
     handleClick: () => console.log('hi'),
   },
   {
+    id: '',
     icon: HorizontalDots,
     title: 'More',
     url: '',
@@ -38,7 +42,7 @@ const navItems = [
 
 const Navbar: FC<NavbarProps> = ({ className }) => {
   return (
-    <nav id="navbar" className="w-full py-2">
+    <nav id="navbar" className="w-full h-full">
       <Tabs items={navItems} className={className} />
     </nav>
   );

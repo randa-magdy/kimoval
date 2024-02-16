@@ -1,7 +1,9 @@
-export default function Home() {
+import Home from '@/features/Home';
+
+export default function HomePage() {
   return (
     <main>
-      <div>Hiiii NextJS</div>
+      <Home />
     </main>
   );
 }
