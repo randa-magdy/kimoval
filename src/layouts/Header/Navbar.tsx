@@ -11,24 +11,28 @@ interface NavbarProps {
 }
 const navItems = [
   {
+    id: '/smartphones',
     icon: Mobile,
     title: 'Cell Phones',
-    url: '',
+    url: '/smartphones',
     handleClick: () => console.log('hi'),
   },
   {
+    id: '',
     icon: Tablet,
     title: 'Tablets',
     url: '',
     handleClick: () => console.log('hi'),
   },
   {
+    id: '',
     icon: FireOutline,
     title: 'Deals',
     url: '',
     handleClick: () => console.log('hi'),
   },
   {
+    id: '',
     icon: HorizontalDots,
     title: 'More',
     url: '',

@@ -1,24 +1,20 @@
 'use client';
-import { IconProps } from '@/types';
 import cn from 'classnames';
 import { usePathname } from 'next/navigation';
-import { ComponentType, FC } from 'react';
-import { TabItem } from './TabItem';
+import { FC, ReactNode } from 'react';
+import { TabItem, TabItemProps } from './TabItem';
 
-interface ItemsProps {
-  icon: ComponentType<IconProps>;
-  title: string;
-  url: string;
-  handleClick?: () => void;
+export interface ItemsProps extends TabItemProps {
+  id: string;
+  content?: string | ReactNode;
 }
-
 interface TabsProps {
   items: ItemsProps[];
   className?: string;
 }
 
 const Tabs: FC<TabsProps> = ({ items, className }) => {
-  const pathname = usePathname();
+  const pathname: string = usePathname();
 
   const ItemsList = () => (
     <ul
@@ -28,10 +24,11 @@ const Tabs: FC<TabsProps> = ({ items, className }) => {
       )}
     >
       {items.map((item, idx) => {
-        const activeTab = pathname === item.url;
+        const activeTab = pathname === item.id;
+        console.log(pathname, item.url, pathname === item.id);
+
         const activeClass =
-          activeTab &&
-          'max-lg:active:bg-transparent-white lg:active:after:bg-white';
+          activeTab && 'max-lg:bg-transparent-white lg:after:bg-white';
         const hoverClasses =
           'max-lg:hover:bg-transparent-white lg:hover:after:bg-white';
         return (
@@ -55,7 +52,19 @@ const Tabs: FC<TabsProps> = ({ items, className }) => {
       })}
     </ul>
   );
-  return <ItemsList />;
+
+  const tabContent = items.find((item) => item.id === pathname && item.content);
+
+  return (
+    <>
+      <ItemsList />
+      {tabContent && (
+        <div className="tab-content text-white py-4 mt-3">
+          {tabContent?.content}
+        </div>
+      )}
+    </>
+  );
 };
 
 export default Tabs;
