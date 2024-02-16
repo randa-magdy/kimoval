@@ -37,7 +37,6 @@ const Input = React.forwardRef<HTMLInputElement, Props>(
       note,
       name,
       error,
-      children,
       variant = 'normal',
       dimension = 'medium',
       shadow = false,
