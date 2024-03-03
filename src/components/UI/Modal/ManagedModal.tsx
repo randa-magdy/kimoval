@@ -3,7 +3,10 @@ import FilterSidebar from '@/components/UI/FilterSidebar';
 import Modal from '@/components/UI/Modal/Modal';
 import { MODAL_VIEWS, useModalAction, useModalState } from './Modal.context';
 
-function renderModal(view: MODAL_VIEWS | undefined, data: any) {
+function renderModal(
+  view: MODAL_VIEWS | undefined
+  // data: any
+) {
   switch (view) {
     case 'OPEN_FILTER':
       return <FilterSidebar />;
@@ -20,7 +23,10 @@ const ManagedModal = () => {
 
   return (
     <Modal open={isOpen} onClose={closeModal} title={data?.title}>
-      {renderModal(view, data)}
+      {renderModal(
+        view
+        // , data
+      )}
     </Modal>
   );
 };

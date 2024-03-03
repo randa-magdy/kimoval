@@ -1,5 +1,5 @@
 'use client';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import { useMemo, useState } from 'react';
 import { StylesConfig } from 'react-select';
 import SelectFilter from '../components/SelectFilter';
@@ -44,14 +44,14 @@ const customStyles: StylesConfig<any, any> = {
   }),
 };
 const PriceFilter = () => {
-  const router = useRouter();
+  // const router = useRouter();
   const searchParams = useSearchParams();
   const price = searchParams.get('price');
   const queryParams: Record<string, string | string[]> = {};
   for (const [key, value] of searchParams.entries()) {
     queryParams[key] = value;
   }
-  const pathname = usePathname();
+  // const pathname = usePathname();
   const selectedValues = useMemo(
     () => (price ? (price as string).split(',') : defaultPriceRange),
     [price]
@@ -63,16 +63,16 @@ const PriceFilter = () => {
   //   setState(selectedValues);
   // }, [selectedValues]);
 
-  function handleChangeSlider(value: number[]) {
-    //@ts-ignore
-    router.push({
-      pathname,
-      query: {
-        ...queryParams,
-        price: value.join(','),
-      },
-    });
-  }
+  // function handleChangeSlider(value: number[]) {
+  //   //@ts-ignore
+  //   router.push({
+  //     pathname,
+  //     query: {
+  //       ...queryParams,
+  //       price: value.join(','),
+  //     },
+  //   });
+  // }
 
   const handleChangeCurrency = (values: Currencies) => {
     console.log('values', values);

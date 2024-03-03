@@ -33,7 +33,7 @@ const VerticalImgContentDeviceCard: FC<VerticalImgContentDeviceCardProps> = ({
   priceAfter,
   hoverCard,
   className,
-  country,
+  // country,
   rating,
   reviewsNumber,
 }) => {
