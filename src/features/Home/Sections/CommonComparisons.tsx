@@ -2,8 +2,8 @@ import { Compare } from '@/components/Icons/Compare';
 import VSTwoDevicesCard from '@/components/UI/DeviceCards/VSTwoDevicesCard';
 import NormalSection from '@/components/UI/Sections/NormalSection';
 import ViewMoreButton from '@/components/UI/ViewMoreButton';
-import Mobile1 from '../../../../public/home/thumb_777314_phone_front_x_small.jpg';
-import Mobile2 from '../../../../public/home/thumb_850151_phone_front_x_small.jpg';
+import Mobile1 from '../../../../public/images/home/thumb_777314_phone_front_x_small.jpg';
+import Mobile2 from '../../../../public/images/home/thumb_850151_phone_front_x_small.jpg';
 
 const CommonComparisons = () => {
   const comparisonData = [

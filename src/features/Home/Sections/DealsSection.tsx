@@ -2,9 +2,9 @@ import { FireOutline } from '@/components/Icons/FireOutline';
 import InlineImgContentCard from '@/components/UI/DeviceCards/InlineImgContentCard';
 import NormalSection from '@/components/UI/Sections/NormalSection';
 import ViewMoreButton from '@/components/UI/ViewMoreButton';
-import Mobile1 from '../../../../public/home/thumb_777314_phone_front_x_small.jpg';
-import Mobile2 from '../../../../public/home/thumb_850151_phone_front_x_small.jpg';
-import Mobile3 from '../../../../public/home/thumb_864704_phone_front_x_small.jpg';
+import Mobile1 from '../../../../public/images/home/thumb_777314_phone_front_x_small.jpg';
+import Mobile2 from '../../../../public/images/home/thumb_850151_phone_front_x_small.jpg';
+import Mobile3 from '../../../../public/images/home/thumb_864704_phone_front_x_small.jpg';
 
 const DealsSection = () => {
   const data = [

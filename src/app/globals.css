@@ -3,9 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary-color: #3b3ece;
 }
 /*
 @media (prefers-color-scheme: dark) {
@@ -37,4 +35,22 @@ body {
 section {
   padding: 40px 0;
   margin: 20px 0;
+}
+
+.hover-appear-child:hover > * {
+  display: block !important;
+}
+
+.hover-appear-hidden:hover .hidden {
+  display: block !important;
+}
+
+/** UI components **/
+/*ScrollBar*/
+.os-scrollbar .os-scrollbar-track {
+  background-color: #cccccc75 !important;
+}
+
+.os-scrollbar.os-scrollbar-handle-interactive .os-scrollbar-handle {
+  background-color: #bfbebed4;
 }

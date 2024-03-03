@@ -21,8 +21,11 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.18",
     "classnames": "^2.5.1",
-    "next": "14.0.4",
+    "next": "^14.1.0",
+    "overlayscrollbars-react": "^0.5.4",
+    "rc-slider": "^10.5.0",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.50.1",

@@ -25,8 +25,6 @@ const Tabs: FC<TabsProps> = ({ items, className }) => {
     >
       {items.map((item, idx) => {
         const activeTab = pathname === item.id;
-        console.log(pathname, item.url, pathname === item.id);
-
         const activeClass =
           activeTab && 'max-lg:bg-transparent-white lg:after:bg-white';
         const hoverClasses =
