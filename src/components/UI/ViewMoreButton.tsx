@@ -8,11 +8,11 @@ const ViewMoreButton: FC<{ url: string }> = ({ url }) => {
     <div className="view-more text-center">
       <Link href={url}>
         <Button
-          className="bg-light-gray rounded-3xl mt-8 hover:bg-primary hover:text-white"
+          className="bg-light-gray rounded-3xl mt-8 hover:bg-primary text-dark-gray hover:text-white"
           size="small"
         >
           <DownArrow fontSize={23} />
-          <span className="text-dark-gray px-2 font-semibold">View More</span>
+          <span className="px-2 font-semibold">View More</span>
         </Button>
       </Link>
     </div>
