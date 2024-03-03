@@ -1,3 +1,5 @@
+import ManagedModal from '@/components/UI/Modal/ManagedModal';
+import { ModalProvider } from '@/components/UI/Modal/Modal.context';
 import HeaderPage from '@/layouts/Header/HeaderPage';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -19,8 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <HeaderPage />
-        {children}
+        <ModalProvider>
+          <HeaderPage />
+          {children}
+          <ManagedModal />
+        </ModalProvider>
       </body>
     </html>
   );

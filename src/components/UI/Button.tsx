@@ -10,6 +10,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   loading?: boolean;
   disabled?: boolean;
   block?: boolean;
+  color?: 'primary' | 'gray';
 }
 const classes = {
   root: 'inline-flex items-center justify-center shrink-0 font-semibold leading-none rounded outline-none transition duration-700 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700',
@@ -27,6 +28,8 @@ const classes = {
   small: 'px-2 py-0 text-sm h-9',
   medium: 'px-5 py-0 h-12',
   big: 'px-10 py-0 h-14',
+  primary: 'bg-primary hover:bg-light-primary text-white',
+  gray: 'bg-dark-gray hover:bg-light-gray text-white hover:text-dark-gray',
 };
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -40,6 +43,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       loading = false,
       disabled = false,
       block,
+      color,
       ...rest
     } = props;
     const classesName = cn(
@@ -53,6 +57,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         [classes.small]: size === 'small',
         [classes.medium]: size === 'medium',
         [classes.big]: size === 'big',
+        [classes.primary]: color === 'primary',
+        [classes.gray]: color === 'gray',
       },
       className
     );

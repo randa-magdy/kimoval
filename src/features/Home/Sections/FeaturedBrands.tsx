@@ -3,14 +3,14 @@ import Carousel from '@/components/UI/Carousel';
 import NormalSection from '@/components/UI/Sections/NormalSection';
 import ViewMoreButton from '@/components/UI/ViewMoreButton';
 import Image from 'next/image';
-import Brand1 from '../../../../public/home/brands/thumb_553615_brands_small.webp';
-import Brand3 from '../../../../public/home/brands/thumb_6870_brands_small.webp';
-import Brand4 from '../../../../public/home/brands/thumb_6926_brands_small.webp';
-import Brand5 from '../../../../public/home/brands/thumb_6927_brands_small.webp';
-import Brand6 from '../../../../public/home/brands/thumb_6936_brands_small.webp';
-import Brand7 from '../../../../public/home/brands/thumb_6949_brands_small.webp';
-import Brand8 from '../../../../public/home/brands/thumb_6955_brands_small.webp';
-import Brand2 from '../../../../public/home/brands/thumb_78095_brands_small.webp';
+import Brand1 from '../../../../public/images/home/brands/thumb_553615_brands_small.webp';
+import Brand3 from '../../../../public/images/home/brands/thumb_6870_brands_small.webp';
+import Brand4 from '../../../../public/images/home/brands/thumb_6926_brands_small.webp';
+import Brand5 from '../../../../public/images/home/brands/thumb_6927_brands_small.webp';
+import Brand6 from '../../../../public/images/home/brands/thumb_6936_brands_small.webp';
+import Brand7 from '../../../../public/images/home/brands/thumb_6949_brands_small.webp';
+import Brand8 from '../../../../public/images/home/brands/thumb_6955_brands_small.webp';
+import Brand2 from '../../../../public/images/home/brands/thumb_78095_brands_small.webp';
 
 const FeaturedBrands = () => {
   const carouselOptions = {

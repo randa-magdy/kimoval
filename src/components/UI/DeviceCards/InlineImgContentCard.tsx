@@ -1,5 +1,5 @@
 import Space from '@/components/UI/Space';
-import cn from 'classnames';
+import { default as classNames, default as cn } from 'classnames';
 import Image, { StaticImageData } from 'next/image';
 import { FC } from 'react';
 
@@ -12,6 +12,7 @@ interface InlineImgContentCardProps {
   reverse?: boolean;
   hoverCard?: boolean;
   className?: string;
+  country?: string;
 }
 const InlineImgContentCard: FC<InlineImgContentCardProps> = ({
   img,
@@ -22,6 +23,7 @@ const InlineImgContentCard: FC<InlineImgContentCardProps> = ({
   reverse,
   hoverCard,
   className,
+  country,
 }) => {
   return (
     <div
@@ -42,7 +44,19 @@ const InlineImgContentCard: FC<InlineImgContentCardProps> = ({
         <span className=" block text-dark-gray font-bold text-medium">
           {name}
         </span>
-        <span className="block text-light-gray text-medium">{detail}</span>
+        <span className="block text-light-gray text-medium">
+          {country && (
+            <span
+              className={classNames(
+                'text-white rounded-md text-small px-1',
+                country !== 'Global' ? 'bg-dark-gray' : 'bg-primary'
+              )}
+            >
+              {country}
+            </span>
+          )}
+          {detail}
+        </span>
         {(priceBefore || priceAfter) && (
           <Space>
             {priceBefore && (

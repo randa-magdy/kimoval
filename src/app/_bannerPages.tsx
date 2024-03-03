@@ -5,7 +5,7 @@ import Button from '@/components/UI/Button';
 import SearchInput from '@/components/UI/Form/SearchInput';
 import Image from 'next/image';
 import { ReactNode } from 'react';
-import Iphone from '../../public/home/iphone.png';
+import Iphone from '../../public/images/home/iphone.png';
 
 const HomeBanner = () => (
   <Banner height="clamp(250px,40vw,500px)">

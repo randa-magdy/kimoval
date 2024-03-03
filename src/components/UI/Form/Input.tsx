@@ -1,6 +1,6 @@
 'use client';
 import cn from 'classnames';
-import React, { InputHTMLAttributes } from 'react';
+import React, { InputHTMLAttributes, ReactNode } from 'react';
 
 export interface Props extends InputHTMLAttributes<HTMLInputElement> {
   className?: string;
@@ -13,6 +13,7 @@ export interface Props extends InputHTMLAttributes<HTMLInputElement> {
   shadow?: boolean;
   variant?: 'normal' | 'solid' | 'outline';
   dimension?: 'small' | 'medium' | 'big';
+  prefixEL?: string | ReactNode;
 }
 
 const classes = {
@@ -25,9 +26,9 @@ const classes = {
   shadow: 'focus:shadow',
 };
 const sizeClasses = {
-  small: 'text-sm h-10',
-  medium: 'h-12',
-  big: 'h-14',
+  small: 'text-sm h-8',
+  medium: 'h-10',
+  big: 'h-12',
 };
 const Input = React.forwardRef<HTMLInputElement, Props>(
   (
@@ -39,6 +40,7 @@ const Input = React.forwardRef<HTMLInputElement, Props>(
       error,
       variant = 'normal',
       dimension = 'medium',
+      prefixEL,
       shadow = false,
       type = 'text',
       inputClassName,
@@ -62,19 +64,29 @@ const Input = React.forwardRef<HTMLInputElement, Props>(
     );
     let numberDisable = type === 'number' && disabled ? 'number-disable' : '';
     return (
-      <div className={className}>
-        <label
-          htmlFor={name}
-          className="block text-body-dark font-semibold text-sm leading-none mb-3"
-        >
-          {label}
-        </label>
+      <div className={cn('relative', className)}>
+        {label && (
+          <label
+            htmlFor={name}
+            className="block text-body-dark font-semibold text-sm leading-none mb-3"
+          >
+            {label}
+          </label>
+        )}
+        {prefixEL && (
+          <span className="absolute h-fall top-1/2 transform -translate-y-1/2 ps-2 w-max">
+            {prefixEL}
+          </span>
+        )}
         <input
           id={name}
           name={name}
           type={type}
           ref={ref}
-          className={`${rootClassName} ${disabled ? `cursor-not-allowed bg-[#EEF1F4] border-[#D4D8DD] ${numberDisable} select-none` : ''}`}
+          className={cn(
+            `${rootClassName} ${disabled ? `cursor-not-allowed bg-[#EEF1F4] border-[#D4D8DD] ${numberDisable} select-none` : ''}`,
+            prefixEL && 'ps-8'
+          )}
           autoComplete="off"
           autoCorrect="off"
           autoCapitalize="off"

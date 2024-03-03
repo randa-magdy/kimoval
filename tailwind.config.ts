@@ -23,7 +23,9 @@ const config: Config = {
         'transparent-white':'hsla(0, 0%, 100%, 0.15)',
         'primary':'#3b3ece',
         'dark-primary':'#2f32a9',
+        'light-primary':'#5c5ff4',
         'secondary':'#03031a',
+        'gray-white':'#f9fafb',
         'light-gray':'#e8ecf3',
         'dark-gray':'#a7a7b1'
       },
@@ -49,7 +51,7 @@ const config: Config = {
       colors:{
         'primary':'#3b3ece',
         'secondary':'#03031a',
-        'dark-geay':'#4f4e56',
+        'dark-gray':'#4f4e56',
         'light-gray':'#a7a7b1',
         'crimson':'crimson'
       },

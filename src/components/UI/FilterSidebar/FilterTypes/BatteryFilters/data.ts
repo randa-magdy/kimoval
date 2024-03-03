@@ -1,0 +1,3 @@
+
+export const simData=[{ label: 'All', value: 'All' },{ label: 'Lithium', value: 'Lithium' },{ label: 'Li-Polymer', value: 'Li-Polymer' },{ label: 'Li-Ion', value: 'Li-Ion' },{ label: 'Li-Ion Polymer', value: 'Li-Ion Polymer' },{ label: 'Si-O2', value: 'Si-O2' },{ label: 'Si-Carbon', value: 'Si-Carbon' },]
+export const others=[{label:'Wireless charging',name:'Wireless charging',value:'Wireless charging'},{label:'Reverse charging',name:'Reverse charging',value:'Reverse charging'},{label:'Removable battery',name:'Removable battery',value:'Removable battery'},]

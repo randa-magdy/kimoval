@@ -1,4 +1,4 @@
-import SmartPhones from '@/features/SmartPhones';
+import SmartPhones from '@/features/Devices/SmartPhones';
 
 export default function SmartPhonesPage() {
   return (

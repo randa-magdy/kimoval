@@ -1,0 +1,9 @@
+
+export const simData=[{ label: 'Dual SIM Full Active', name: 'Dual SIM Full Active', value: 'Dual SIM Full Active' },{ label: 'Dual SIM', name: 'Dual SIM', value: 'Dual SIM' },{ label: 'eSIM', name: 'eSIM', value: 'eSIM' },]
+export const positioningFirstData=[{label:'GPS',name:'GPS',value:'GPS'},{label:'Galileo',name:'Galileo',value:'Galileo'},{label:'BeiDou',name:'BeiDou',value:'BeiDou'},{label:'Glonass',name:'Glonass',value:'Glonass'},]
+export const positioningSecondData=[{label:'GPS Dual',name:'GPS Dual',value:'GPS Dual',note:'(L1+L5)'},{label:'Galileo Dual',name:'Galileo Dual',value:'Galileo Dual',note:'(E1+E5a)'},{label:'BeiDou Dual',name:'BeiDou Dual',value:'BeiDou Dual',note:'(B1+B2)'},]
+export const wifiData=[{label:'WiFi 1',name:'WiFi 1',value:'WiFi 1',note:'802.11b (11 Mbps)'},{label:'WiFi 2',name:'WiFi 2',value:'WiFi 2',note:'802.11g (54 Mbps)'},{label:'WiFi 3',name:'WiFi 3',value:'WiFi 3',note:'802.11n (300 Mbps)'},{label:'WiFi 4',name:'WiFi 4',value:'WiFi 4',note:'802.11ac (1.3 Gbps)'},{label:'WiFi 5',name:'WiFi 5',value:'WiFi 5',note:'802.11ad (4.6 Gbps)'},{label:'WiFi 6',name:'WiFi 6',value:'WiFi 6',note:'802.11ax (11 Gbps)'},{label:'WiFi 7',name:'WiFi 7',value:'WiFi 7',note:'802.11be (48 Gbps)'},]
+export const usbTypes=[{label:'USB Type C',name:'USB Type C',value:'USB Type C'},{label:'USB 3.0',name:'USB 3.0',value:'USB 3.0'},{label:'USB 3.1',name:'USB 3.1',value:'USB 3.1'},{label:'USB 3.2',name:'USB 3.2',value:'USB 3.2'},]
+export const nfcRadioInfrarFirstData=[{label:'NFC',name:'NFC',value:'NFC'},{label:'Infrared',name:'Infrared',value:'Infrared'},{label:'FM Radio',name:'FM Radio',value:'FM Radio'},{label:'Audio Jack',name:'Audio Jack',value:'Audio Jack'},]
+export const nfcRadioInfrarSecondData=[{label:'WI-FI Display',name:'WI-FI Display',value:'WI-FI Display'},{label:'TV Out',name:'TV Out',value:'TV Out'},{label:'VoLTE',name:'VoLTE',value:'VoLTE'},]
+

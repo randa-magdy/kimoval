@@ -1,5 +1,4 @@
 'use client';
-// import { useIsRTL } from '@/utils/locals';
 import React from 'react';
 import ReactSelect, { Props } from 'react-select';
 import { selectStyles } from './Select.styles';
@@ -7,15 +6,7 @@ import { selectStyles } from './Select.styles';
 export type Ref = any;
 
 export const Select = React.forwardRef<Ref, Props>((props, ref) => {
-  // const { isRTL } = useIsRTL();
-  return (
-    <ReactSelect
-      ref={ref}
-      styles={selectStyles}
-      // isRtl={isRTL}
-      {...props}
-    />
-  );
+  return <ReactSelect ref={ref} styles={selectStyles} {...props} />;
 });
 
 Select.displayName = 'Select';
