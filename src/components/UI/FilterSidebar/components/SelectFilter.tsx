@@ -10,6 +10,10 @@ const customStyles: StylesConfig<any, any> = {
     height: 30,
     borderRadius: '0.5rem',
   }),
+  menu: (baseStyles) => ({
+    ...baseStyles,
+    zIndex: 9,
+  }),
 };
 
 interface SelectFilterProps extends SelectProps {

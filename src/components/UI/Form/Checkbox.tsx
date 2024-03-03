@@ -32,7 +32,7 @@ const Checkbox = React.forwardRef<HTMLInputElement, Props>(
           <label
             htmlFor={name}
             className={classNames(
-              'text-body text-less-medium px-2 flex items-center',
+              'text-body text-less-medium px-2 flex items-center text-dark-gray font-medium',
               {
                 primary: theme === 'primary',
                 secondary: theme === 'secondary',
