@@ -44,7 +44,7 @@ const InlineImgContentCard: FC<InlineImgContentCardProps> = ({
         <span className=" block text-dark-gray font-bold text-medium">
           {name}
         </span>
-        <span className="block text-light-gray text-medium">
+        <span className="block text-light-gray text-less-medium">
           {country && (
             <span
               className={classNames(

@@ -24,8 +24,8 @@ const FeaturedBrands = () => {
   const responsive = {
     xl: 6,
     lg: 5,
-    md: 4,
-    xs: 3,
+    md: 3,
+    xs: 2,
   };
 
   const brands = [

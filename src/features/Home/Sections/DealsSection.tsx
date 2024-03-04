@@ -74,15 +74,17 @@ const DealsSection = () => {
   ];
 
   const dataList = data.map((item) => (
-    <InlineImgContentCard
-      key={item.name}
-      img={item.img}
-      name={item.name}
-      detail={item.detail}
-      priceBefore={item.priceBefore}
-      priceAfter={item.priceAfter}
-      hoverCard={true}
-    />
+    <div key={item.name} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+      <InlineImgContentCard
+        img={item.img}
+        name={item.name}
+        detail={item.detail}
+        priceBefore={item.priceBefore}
+        priceAfter={item.priceAfter}
+        hoverCard={true}
+        className="mx-auto sm:mx-0"
+      />
+    </div>
   ));
   return (
     <NormalSection

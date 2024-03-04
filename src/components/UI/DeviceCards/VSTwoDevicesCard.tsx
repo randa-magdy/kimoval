@@ -17,7 +17,7 @@ const VSTwoDevicesCard: FC<VSTwoDevicesCardProps> = ({
   deviceTwo,
 }) => {
   return (
-    <div className="flex items-center relative">
+    <div className="flex items-center relative mx-auto">
       <InlineImgContentCard
         img={deviceOne.img}
         name={deviceOne.name}
