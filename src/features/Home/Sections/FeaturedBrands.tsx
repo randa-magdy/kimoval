@@ -1,8 +1,11 @@
+'use client';
 import { AppleBrand } from '@/components/Icons/AppleBrand';
-import Carousel from '@/components/UI/Carousel';
 import NormalSection from '@/components/UI/Sections/NormalSection';
+import SwiperCarousel from '@/components/UI/Swiper';
 import ViewMoreButton from '@/components/UI/ViewMoreButton';
 import Image from 'next/image';
+import { Autoplay, FreeMode, Thumbs } from 'swiper/modules';
+import { SwiperSlide } from 'swiper/react';
 import Brand1 from '../../../../public/images/home/brands/thumb_553615_brands_small.webp';
 import Brand3 from '../../../../public/images/home/brands/thumb_6870_brands_small.webp';
 import Brand4 from '../../../../public/images/home/brands/thumb_6926_brands_small.webp';
@@ -15,17 +18,25 @@ import Brand2 from '../../../../public/images/home/brands/thumb_78095_brands_sma
 const FeaturedBrands = () => {
   const carouselOptions = {
     // className: "center",
-    infinite: true,
-    dots: false,
-    arrows: false,
-    autoplay: true,
-    centerMode: true,
+    navigation: false,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      clickable: true,
+    },
+    modules: [FreeMode, Thumbs, Autoplay],
+    freeMode: true,
+    watchSlidesProgress: true,
   };
+
   const responsive = {
-    xl: 6,
-    lg: 5,
-    md: 3,
-    xs: 2,
+    xs: 3,
+    sm: 4,
+    md: 5,
+    lg: 6,
+    xxl: 6,
   };
 
   const brands = [
@@ -40,9 +51,13 @@ const FeaturedBrands = () => {
   ];
 
   const brandsList = brands.map((brand, idx) => (
-    <div key={idx}>
-      <Image src={brand} alt="brand" className="bg-white" />
-    </div>
+    <SwiperSlide key={idx}>
+      <Image
+        src={brand}
+        alt="brand"
+        className="bg-white rounded-2xl w-24 sm:w-32 xl:w-36"
+      />
+    </SwiperSlide>
   ));
   return (
     <NormalSection
@@ -50,9 +65,13 @@ const FeaturedBrands = () => {
       title="Featured Brands"
       icon={AppleBrand}
     >
-      <Carousel responsive={responsive} {...carouselOptions}>
+      <SwiperCarousel
+        responsive={responsive}
+        className="mx-auto"
+        {...carouselOptions}
+      >
         {brandsList}
-      </Carousel>
+      </SwiperCarousel>
       <ViewMoreButton url="#" />
     </NormalSection>
   );

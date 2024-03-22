@@ -4,7 +4,7 @@ import TopFooter from './TopFooter';
 
 const Footer = () => {
   return (
-    <footer className="py-5 bg-light-gray border-t-8 border-gray-300">
+    <footer className="py-5 bg-light-gray border-t-8 border-gray-300 relative bottom-0">
       <div className="container mx-auto">
         <Space direction="vertical">
           <TopFooter />

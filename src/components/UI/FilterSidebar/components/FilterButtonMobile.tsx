@@ -9,7 +9,7 @@ const FilterButtonMobile: FC = () => {
   const { openModal } = useModalAction();
 
   const handleOpenFilter = () => {
-    openModal('OPEN_FILTER', {
+    openModal('OPEN_FILTER', undefined, {
       title: (
         <div className="flex items-center">
           <Filter fontSize={25} className="text-dark-gray" />

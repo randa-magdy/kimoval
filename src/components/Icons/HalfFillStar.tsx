@@ -1,12 +1,12 @@
 import { IconProps } from '@/types';
 
-export const HalfEmptyStar = (props: IconProps) => {
+export const HalfFillStar = (props: IconProps) => {
   return (
     <svg
       stroke="currentColor"
       fill="currentColor"
       strokeWidth="0"
-      viewBox="0 0 536 512"
+      viewBox="0 0 576 512"
       height="1em"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"

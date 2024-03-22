@@ -10,10 +10,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens:{
+        'xxl':'1400px'
+      },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-radial':'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'gradient-white-light-100':'linear-gradient(90deg,hsla(0,0%,100%,.1) 0,hsla(0,0%,100%,0))',
         'gradient-white-light-200':'linear-gradient(90deg,hsla(0,0%,100%,.2) 0,hsla(0,0%,100%,0))!important',
         'gredient-black-purpel':'radial-gradient(ellipse 120% 210% at 95% 0,#3b3ece 10%,#2f32a9 20%,#03031a 70%)',
@@ -26,6 +28,7 @@ const config: Config = {
         'light-primary':'#5c5ff4',
         'secondary':'#03031a',
         'gray-white':'#f9fafb',
+        'dark-gray-white':'#f3f5fa',
         'light-gray':'#e8ecf3',
         'dark-gray':'#a7a7b1'
       },
@@ -42,7 +45,7 @@ const config: Config = {
         'h3':'clamp(1.2rem, 2.13vw, 1.6rem)',
         'h4':'clamp(1rem, 1.7vw, 1.34rem)',
         'h5':'clamp(1rem, 1.67vw, 1.25rem)',
-        'h6':'clamp(1rem, 1.67vw, 1.25rem)',
+        'h6':'clamp(0.8rem, 1.3vw, 1rem)',
         'normal':'clamp(16px, 1.5vw, 18px)',
         'medium':'clamp(14px, 1.3vw, 16px)',
         'less-medium':'clamp(12px, 1.2vw, 14px)',
@@ -50,6 +53,8 @@ const config: Config = {
       },
       colors:{
         'primary':'#3b3ece',
+        'light-primary':'#5c5ff4',
+        'dark-primary':'#2f32a9',
         'secondary':'#03031a',
         'dark-gray':'#4f4e56',
         'light-gray':'#a7a7b1',

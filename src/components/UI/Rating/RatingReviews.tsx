@@ -1,19 +1,13 @@
 import { FC } from 'react';
-import { FillStar } from '../Icons/FillStar';
+import RatingStar, { RatingStarProps } from './RatingStar';
 
-export interface RatingReviewsProps {
-  rating: number | string;
+export interface RatingReviewsProps extends RatingStarProps {
   reviewsNumber: string;
 }
 const RatingReviews: FC<RatingReviewsProps> = ({ rating, reviewsNumber }) => {
   return (
     <div className="rating-reviews flex my-2">
-      <div className="rating flex items-center">
-        <span className="text-dark-gray text-less-medium font-bold">
-          {rating}
-        </span>
-        <FillStar className="text-yellow-400 mx-2" fontSize={15} />
-      </div>
+      <RatingStar rating={rating} />
       <div className="reviews text-light-gray text-less-medium font-medium">
         <span>{'(' + reviewsNumber + ')'} Review</span>
       </div>
