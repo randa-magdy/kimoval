@@ -16,19 +16,20 @@ const HomeBanner = () => (
       <Image src={Iphone} alt="iphone" className="hidden lg:block" />
 
       <div className="banner-title-input mt-20 lg:mt-0 h-full">
-        <h1 className="text-h1 font-bold">
+        <h1 className="text-h2 sm:text-h1 font-bold">
           <span>Compare Devices &</span> <br />{' '}
           <span style={{ paddingLeft: 'clamp(0.2rem,14vw,14rem)' }}>
             Make Informed Choices
           </span>
         </h1>
         <div
-          className="cmpare-input flex align-middle mt-8"
+          className="compare-input flex align-middle mt-8"
           style={{ width: 'clamp(75%,100vw,100%)' }}
         >
           <SearchInput className="w-full" />
           <Button className="bg-primary rounded-tr-3xl rounded-br-3xl hover:bg-dark-primary">
-            <Compare fontSize={25} /> <span className="px-2">Compare</span>
+            <Compare fontSize={25} />{' '}
+            <span className="px-2 text-medium">Compare</span>
           </Button>
         </div>
       </div>
@@ -93,7 +94,7 @@ const SmartPhonesBanner = () => {
 };
 
 const SingleDeviceBanner = () => (
-  <Banner height="clamp(120px,20vw,200px)">
+  <Banner height="clamp(150px,20vw,200px)">
     <div className="container mx-auto relative">
       <Space direction="vertical" className="absolute translate-y-1/4">
         <Space align="baseline">

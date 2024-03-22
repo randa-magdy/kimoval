@@ -180,7 +180,7 @@ export type acceptedXsWidth =
   | 'xs:w-full';
 
 
-export type acceptedPaddings = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+export type acceptedPaddings = 0 |1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
 export type accepted2XlPadding ='2xl:p-1'|'2xl:p-2'|'2xl:p-3'|'2xl:p-4'|'2xl:p-5'|'2xl:p-6'|'2xl:p-7'|'2xl:p-8'|'2xl:p-9'|'2xl:p-10'
 export type acceptedXlPadding ='xl:p-1'|'xl:p-2'|'xl:p-3'|'xl:p-4'|'xl:p-5'|'xl:p-6'|'xl:p-7'|'xl:p-8'|'xl:p-9'|'xl:p-10'
 export type acceptedLgPadding ='lg:p-1'|'lg:p-2'|'lg:p-3'|'lg:p-4'|'lg:p-5'|'lg:p-6'|'lg:p-7'|'lg:p-8'|'lg:p-9'|'lg:p-10'

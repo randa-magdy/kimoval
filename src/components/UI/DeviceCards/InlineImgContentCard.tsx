@@ -41,7 +41,7 @@ const InlineImgContentCard: FC<InlineImgContentCardProps> = ({
           reverse ? 'text-end me-2' : 'text-start ms-2'
         )}
       >
-        <span className=" block text-dark-gray font-bold text-medium">
+        <span className=" block text-dark-gray font-bold text-less-medium sm:text-medium">
           {name}
         </span>
         <span className="block text-light-gray text-less-medium">

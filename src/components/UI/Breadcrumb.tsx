@@ -10,14 +10,14 @@ const Breadcrumb: FC<{ items: Items }> = ({ items }) => {
         <Link
           key={item.label}
           href={item.url}
-          className="text-light-gray hover:text-white transition-colors duration-300 ease-in-out"
+          className="text-light-gray hover:text-white text-medium transition-colors duration-300 ease-in-out"
         >
           {item.label}
         </Link>
       ) : (
         <span
           key={item.label}
-          className="text-light-gray hover:text-white transition-colors duration-300 ease-in-out"
+          className="text-light-gray hover:text-white text-medium transition-colors duration-300 ease-in-out"
         >
           {item.label}
         </span>
