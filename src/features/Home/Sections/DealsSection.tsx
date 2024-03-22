@@ -1,5 +1,7 @@
 import { FireOutline } from '@/components/Icons/FireOutline';
 import InlineImgContentCard from '@/components/UI/DeviceCards/InlineImgContentCard';
+import Col from '@/components/UI/ResponsiveFlex/Col';
+import Row from '@/components/UI/ResponsiveFlex/Row';
 import NormalSection from '@/components/UI/Sections/NormalSection';
 import ViewMoreButton from '@/components/UI/ViewMoreButton';
 import Mobile1 from '../../../../public/images/home/thumb_777314_phone_front_x_small.jpg';
@@ -74,7 +76,13 @@ const DealsSection = () => {
   ];
 
   const dataList = data.map((item) => (
-    <div key={item.name} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+    <Col
+      key={item.name}
+      xs="xs:w-6/12"
+      sm="sm:w-4/12"
+      // md="md:w-4/12"
+      lg="lg:w-3/12"
+    >
       <InlineImgContentCard
         img={item.img}
         name={item.name}
@@ -82,9 +90,9 @@ const DealsSection = () => {
         priceBefore={item.priceBefore}
         priceAfter={item.priceAfter}
         hoverCard={true}
-        className="mx-auto sm:mx-0"
+        // className="mx-auto sm:mx-0"
       />
-    </div>
+    </Col>
   ));
   return (
     <NormalSection
@@ -92,7 +100,9 @@ const DealsSection = () => {
       title="Deals"
       icon={FireOutline}
     >
-      <div className="devices-deals-list flex flex-wrap">{dataList}</div>
+      <Row className="devices-deals-list" justify="between" gutter={0}>
+        {dataList}
+      </Row>
       <ViewMoreButton url="#" />
     </NormalSection>
   );

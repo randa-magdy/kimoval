@@ -60,7 +60,7 @@ const Col: FC<ColProps> = ({
 
   // Handle breakpoints properties
   const breakpoints = { xs, sm, md, lg, xl, xxl };
-  classNames += ` w-full`;
+  // classNames += ` w-full`;
 
   Object.values(breakpoints).forEach((value) => {
     if (value) {
@@ -69,7 +69,7 @@ const Col: FC<ColProps> = ({
   });
 
   // Handle gutter property
-  classNames += ` p-2`;
+  // classNames += ` p-2`;
   if (typeof gutter === 'number') {
     classNames += ` p-${gutter}`;
   } else if (typeof gutter === 'object' && !Array.isArray(gutter)) {

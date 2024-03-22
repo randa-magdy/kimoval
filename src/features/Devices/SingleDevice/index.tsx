@@ -13,7 +13,7 @@ const SingleDevice: FC = () => {
   //"w-full xs:w-full md:w-6/12 lg:w-4/12"
   return (
     <div className="container mx-auto">
-      <Row justify="between">
+      <Row justify="between" className="px-2">
         <Col xs="xs:w-full" lg="lg:w-5/12" xl="xl:w-4/12">
           <div className="lg:sticky top-0 left-0">
             <DeviceSlider />

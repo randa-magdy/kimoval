@@ -8,7 +8,7 @@ const SectionTitle: FC<SectionTitleProps> = ({ title, icon: Icon }) => {
   const firstLetter = title?.split('')[0]?.toUpperCase();
   const remainTitle = title?.split('')?.slice(1, title?.length).join('');
   return (
-    <div className="title-text relative font-bold mb-8">
+    <div className="title-text relative font-bold mb-5">
       <h3 className="text-h3 border-b-black">
         <span className="text-primary">
           {Icon && <Icon fontSize={25} className="inline" />} {firstLetter}
