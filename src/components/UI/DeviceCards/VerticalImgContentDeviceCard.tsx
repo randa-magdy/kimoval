@@ -6,7 +6,7 @@ import Space from '@/components/UI/Space';
 import { default as cn } from 'classnames';
 import Image, { StaticImageData } from 'next/image';
 import { FC } from 'react';
-import RatingReviews, { RatingReviewsProps } from '../RatingReviews';
+import RatingReviews, { RatingReviewsProps } from '../Rating/RatingReviews';
 
 export interface VerticalImgContentDeviceCardProps extends RatingReviewsProps {
   img: StaticImageData;

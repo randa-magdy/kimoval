@@ -37,12 +37,20 @@ section {
   margin: 20px 0;
 }
 
+main {
+  margin: 40px 0;
+}
+
 .hover-appear-child:hover > * {
   display: block !important;
 }
 
 .hover-appear-hidden:hover .hidden {
   display: block !important;
+}
+
+.hover-white-text-child:hover > * {
+  color: #fff !important;
 }
 
 /** UI components **/

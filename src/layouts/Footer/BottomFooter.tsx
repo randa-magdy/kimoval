@@ -35,6 +35,7 @@ const BottomFooter: FC = () => {
         key={idx}
         href={item.url}
         className={cn(idx !== rightSideData.length - 1 && 'me-5')}
+        rel="noopener noreferrer nofollow"
       >
         <Icon
           fontSize={20}

@@ -1,6 +1,7 @@
 'use client';
 import { Close } from '@/components/Icons/Close';
 import { Dialog, Transition } from '@headlessui/react';
+import cn from 'classnames';
 import { FC, Fragment, ReactNode } from 'react';
 
 interface ModalProps {
@@ -8,8 +9,19 @@ interface ModalProps {
   onClose: () => void;
   title?: string | ReactNode;
   children: ReactNode;
+  width?:
+    | 'max-w-md'
+    | 'max-w-lg'
+    | 'max-w-xl'
+    | 'max-w-2xl'
+    | 'max-w-3xl'
+    | 'max-w-4xl'
+    | 'max-w-5xl'
+    | 'max-w-6xl'
+    | 'max-w-7xl'
+    | 'max-w-full';
 }
-const Modal: FC<ModalProps> = ({ open, onClose, title, children }) => {
+const Modal: FC<ModalProps> = ({ open, onClose, title, width, children }) => {
   // const { locale } = useRouter();
   // const dir = locale === 'ar' ? 'rtl' : 'ltr';
 
@@ -39,10 +51,15 @@ const Modal: FC<ModalProps> = ({ open, onClose, title, children }) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+              <Dialog.Panel
+                className={cn(
+                  'w-full transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all',
+                  width ? width : 'max-w-md'
+                )}
+              >
                 <Dialog.Title
                   as="h2"
-                  className="font-bold leading-6 text-gray-900 w-full"
+                  className="font-bold leading-6 text-gray-900 w-full mb-3"
                 >
                   <div className="flex justify-between items-center">
                     <span className="text-dark-gray text-h2">{title}</span>

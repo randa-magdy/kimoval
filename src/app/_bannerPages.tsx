@@ -1,8 +1,11 @@
 import { Compare } from '@/components/Icons/Compare';
 import Banner from '@/components/UI/Banner/Banner';
 import TitleDescription from '@/components/UI/Banner/TitleDescription';
+import Breadcrumb from '@/components/UI/Breadcrumb';
 import Button from '@/components/UI/Button';
 import SearchInput from '@/components/UI/Form/SearchInput';
+import RatingReviews from '@/components/UI/Rating/RatingReviews';
+import Space from '@/components/UI/Space';
 import Image from 'next/image';
 import { ReactNode } from 'react';
 import Iphone from '../../public/images/home/iphone.png';
@@ -89,10 +92,32 @@ const SmartPhonesBanner = () => {
   return <Banner height="max-content" tabsItems={tabsItems} />;
 };
 
+const SingleDeviceBanner = () => (
+  <Banner height="clamp(120px,20vw,200px)">
+    <div className="container mx-auto relative">
+      <Space direction="vertical" className="absolute translate-y-1/4">
+        <Space align="baseline">
+          <h1 className="text-light-gray text-h1">Xiaomi 14</h1>
+          <RatingReviews rating={4.5} reviewsNumber="3.5k" />
+        </Space>
+        <Breadcrumb
+          items={[
+            { label: 'View all smartphones', url: '/smartphones' },
+            { label: 'Brands', url: '#' },
+            { label: 'Xiaomi', url: '#' },
+            { label: 'Xiaomi 14' },
+          ]}
+        />
+      </Space>
+    </div>
+  </Banner>
+);
+
 interface BannerPagesProps {
   [key: string]: { bannerComponent: ReactNode };
 }
 export const BannerPages: BannerPagesProps = {
   '/': { bannerComponent: <HomeBanner /> },
   '/smartphones': { bannerComponent: <SmartPhonesBanner /> },
+  '/xiaomi-14': { bannerComponent: <SingleDeviceBanner /> },
 };

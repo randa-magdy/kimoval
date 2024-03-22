@@ -3,24 +3,40 @@ import { Dispatch, FC, createContext, useContext, useReducer } from 'react';
 
 export type MODAL_VIEWS =
   | 'OPEN_LOGIN'
+  | 'OPEN_DEVICE_GALLERY'
   | 'OPEN_FILTER'
+  | 'OPEN_ADD_REVIEW_FORM'
   | 'OPEN_LISTS'
   | 'OPEN_ALERTS'
   | 'OPEN_PROFILE';
 
+export type MODAL_WIDTH =
+  | 'max-w-md'
+  | 'max-w-lg'
+  | 'max-w-xl'
+  | 'max-w-2xl'
+  | 'max-w-3xl'
+  | 'max-w-4xl'
+  | 'max-w-5xl'
+  | 'max-w-6xl'
+  | 'max-w-7xl'
+  | 'max-w-full'
+  | undefined;
 interface State {
   view?: MODAL_VIEWS;
   data?: any;
   isOpen: boolean;
+  width?: MODAL_WIDTH;
 }
 type Action =
-  | { type: 'open'; view?: MODAL_VIEWS; payload?: any }
+  | { type: 'open'; view?: MODAL_VIEWS; payload?: any; width?: MODAL_WIDTH }
   | { type: 'close' };
 
 const initialState: State = {
   view: undefined,
   isOpen: false,
   data: null,
+  width: 'max-w-md',
 };
 
 function modalReducer(state: State, action: Action): State {
@@ -31,6 +47,7 @@ function modalReducer(state: State, action: Action): State {
         view: action.view,
         data: action.payload,
         isOpen: true,
+        width: action.width,
       };
     case 'close':
       return {
@@ -38,6 +55,7 @@ function modalReducer(state: State, action: Action): State {
         view: undefined,
         data: null,
         isOpen: false,
+        width: 'max-w-md',
       };
     default:
       throw new Error('Unknown Modal Action!');
@@ -76,8 +94,8 @@ export function useModalAction() {
     throw new Error(`useModalAction must be used within a ModalProvider`);
   }
   return {
-    openModal(view?: MODAL_VIEWS, payload?: unknown) {
-      dispatch({ type: 'open', view, payload });
+    openModal(view?: MODAL_VIEWS, width?: MODAL_WIDTH, payload?: unknown) {
+      dispatch({ type: 'open', view, width, payload });
     },
     closeModal() {
       dispatch({ type: 'close' });
