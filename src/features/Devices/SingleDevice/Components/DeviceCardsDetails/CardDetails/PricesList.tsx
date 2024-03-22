@@ -17,6 +17,7 @@ const PricesList: FC<PricesListProps> = ({ name, pricesData }) => {
       if (a.price !== null && b.price !== null) {
         return a.price - b.price;
       }
+      return 0;
     })[0].price;
 
   const pricesList = pricesData.map((item, idx) => (
