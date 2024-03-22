@@ -14,7 +14,7 @@ const PricesList: FC<PricesListProps> = ({ name, pricesData }) => {
   const cheapestPrice =
     pricesData.length > 0 &&
     pricesData.sort((a, b) => {
-      if (a.price !== null && b.price !== null) {
+      if (a?.price !== null && b?.price !== null) {
         return a.price - b.price;
       }
       return 0;
