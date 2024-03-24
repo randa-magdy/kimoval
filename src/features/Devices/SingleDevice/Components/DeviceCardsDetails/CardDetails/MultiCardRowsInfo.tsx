@@ -10,7 +10,7 @@ export type Cards = {
 
 const MultiCardRowsInfo: FC<{ cards: Cards }> = ({ cards }) => {
   const cardsList = cards.map((card, idx) => (
-    <Col key={idx} xs="xs:w-full" md="md:w-6/12" lg="lg:w-full" xl="xl:w-6/12">
+    <Col key={idx} xs="w-full" md="md:w-6/12" lg="lg:w-full" xl="xl:w-6/12">
       <Card
         radius="rounded-xl"
         color="bg-gray-white"

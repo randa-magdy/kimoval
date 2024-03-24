@@ -78,7 +78,7 @@ const DealsSection = () => {
   const dataList = data.map((item) => (
     <Col
       key={item.name}
-      xs="xs:w-6/12"
+      xs="w-6/12"
       sm="sm:w-4/12"
       // md="md:w-4/12"
       lg="lg:w-3/12"

@@ -53,7 +53,7 @@ const Col: FC<ColProps> = ({
   xl,
   xxl,
   className,
-  gutter = { xs: 'xs:p-2', xl: 'xl:p-3' },
+  gutter = { xs: 'p-2', xl: 'xl:p-3' },
   children,
 }) => {
   let classNames = classes.root;
