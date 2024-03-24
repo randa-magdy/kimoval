@@ -708,14 +708,14 @@ export const CameraData = [
             label="Features"
             description={
               <Row justify="between">
-                <Col xs="xs:w-full" md="md:w-6/12">
+                <Col xs="w-full" md="md:w-6/12">
                   <ul className="list-disc">
                     {cameraFirstFeatures.map((feature, idx) => (
                       <li key={idx}>{feature}</li>
                     ))}
                   </ul>
                 </Col>
-                <Col xs="xs:w-full" md="md:w-6/12">
+                <Col xs="w-full" md="md:w-6/12">
                   <ul className="list-disc">
                     {cameraSecondFeatures.map((feature, idx) => (
                       <li key={idx}>{feature}</li>

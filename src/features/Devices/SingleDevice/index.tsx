@@ -10,11 +10,11 @@ import UserActions from './Components/DeviceInfoSlider/UserActions';
 import RatingReviewsComments from './Components/RatingReviewsComments';
 
 const SingleDevice: FC = () => {
-  //"w-full xs:w-full md:w-6/12 lg:w-4/12"
+  //"w-full w-full md:w-6/12 lg:w-4/12"
   return (
     <div className="container mx-auto">
       <Row justify="between" className="px-2">
-        <Col xs="xs:w-full" lg="lg:w-5/12" xl="xl:w-4/12">
+        <Col xs="w-full" lg="lg:w-5/12" xl="xl:w-4/12">
           <div className="lg:sticky top-0 left-0">
             <DeviceSlider />
             <UserActions />
@@ -22,7 +22,7 @@ const SingleDevice: FC = () => {
           </div>
         </Col>
 
-        <Col xs="xs:w-full" lg="lg:w-7/12" xl="xl:w-8/12">
+        <Col xs="w-full" lg="lg:w-7/12" xl="xl:w-8/12">
           <Space direction="vertical">
             <DeviceInfo />
             <DeviceCardsDetails />
@@ -30,7 +30,7 @@ const SingleDevice: FC = () => {
         </Col>
       </Row>
       <Row justify="between">
-        <Col xs="xs:w-full">
+        <Col xs="w-full">
           <RatingReviewsComments />
         </Col>
       </Row>

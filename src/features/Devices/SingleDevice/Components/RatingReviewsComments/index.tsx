@@ -9,7 +9,7 @@ const RatingReviewsComments = () => {
     <InfoCard title="Ratings & Reviews of Xiaomi 14">
       <Row justify="between">
         <Col
-          xs="xs:w-full"
+          xs="w-full"
           md="md:w-6/12"
           lg="lg:w-5/12"
           xl="xl:w-4/12"
@@ -17,7 +17,7 @@ const RatingReviewsComments = () => {
         >
           <OverallRating />
         </Col>
-        <Col xs="xs:w-full" lg="lg:w-7/12" xl="xl:w-8/12">
+        <Col xs="w-full" lg="lg:w-7/12" xl="xl:w-8/12">
           <ReviewsComments />
         </Col>
       </Row>

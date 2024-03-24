@@ -47,12 +47,12 @@ export type accepted2XlJustify =
   | 'sm:justify-evenly';
   
   export type acceptedXsJustify =
-  | 'xs:justify-start'
-  | 'xs:justify-end'
-  | 'xs:justify-center'
-  | 'xs:justify-around'
-  | 'xs:justify-between'
-  | 'xs:justify-evenly';
+  | 'justify-start'
+  | 'justify-end'
+  | 'justify-center'
+  | 'justify-around'
+  | 'justify-between'
+  | 'justify-evenly';
 
 
 export type acceptedAligns = 'top'| 'middle'| 'bottom'| 'stretch';
@@ -88,10 +88,10 @@ export type accepted2XlAlign =
   | 'sm:items-stretch';
   
   export type acceptedXsAlign =
-  | 'xs:items-top'
-  | 'xs:items-middle'
-  | 'xs:items-bottom'
-  | 'xs:items-stretch';
+  | 'items-top'
+  | 'items-middle'
+  | 'items-bottom'
+  | 'items-stretch';
 
 
 
@@ -166,18 +166,18 @@ export type acceptedSmWidth =
   | 'sm:w-full';
 
 export type acceptedXsWidth =
-  | 'xs:w-1/12'
-  | 'xs:w-2/12'
-  | 'xs:w-3/12'
-  | 'xs:w-4/12'
-  | 'xs:w-5/12'
-  | 'xs:w-6/12'
-  | 'xs:w-7/12'
-  | 'xs:w-8/12'
-  | 'xs:w-9/12'
-  | 'xs:w-10/12'
-  | 'xs:w-11/12'
-  | 'xs:w-full';
+  | 'w-1/12'
+  | 'w-2/12'
+  | 'w-3/12'
+  | 'w-4/12'
+  | 'w-5/12'
+  | 'w-6/12'
+  | 'w-7/12'
+  | 'w-8/12'
+  | 'w-9/12'
+  | 'w-10/12'
+  | 'w-11/12'
+  | 'w-full';
 
 
 export type acceptedPaddings = 0 |1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
@@ -186,4 +186,4 @@ export type acceptedXlPadding ='xl:p-1'|'xl:p-2'|'xl:p-3'|'xl:p-4'|'xl:p-5'|'xl:
 export type acceptedLgPadding ='lg:p-1'|'lg:p-2'|'lg:p-3'|'lg:p-4'|'lg:p-5'|'lg:p-6'|'lg:p-7'|'lg:p-8'|'lg:p-9'|'lg:p-10'
 export type acceptedMdPadding ='md:p-1'|'md:p-2'|'md:p-3'|'md:p-4'|'md:p-5'|'md:p-6'|'md:p-7'|'md:p-8'|'md:p-9'|'md:p-10'
 export type acceptedSmPadding ='sm:p-1'|'sm:p-2'|'sm:p-3'|'sm:p-4'|'sm:p-5'|'sm:p-6'|'sm:p-7'|'sm:p-8'|'sm:p-9'|'sm:p-10'
-export type acceptedXsPadding ='xs:p-1'|'xs:p-2'|'xs:p-3'|'xs:p-4'|'xs:p-5'|'xs:p-6'|'xs:p-7'|'xs:p-8'|'xs:p-9'|'xs:p-10'
+export type acceptedXsPadding ='p-1'|'p-2'|'p-3'|'p-4'|'p-5'|'p-6'|'p-7'|'p-8'|'p-9'|'p-10'
